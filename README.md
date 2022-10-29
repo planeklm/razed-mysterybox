@@ -1,6 +1,6 @@
 # Mystery Box by Razed
 **Hello FiveM community!👋**\
-We have created a simple mystery box script, which is fully customizable and utilizes qb-target. Go to blip on the map, and interact with the NPC using your 3rd eye to purchase your mystery box. There are 2 options in default, low tier and premium tier (you can add more if you want).
+We have created a simple mystery box script, which is fully customizable and utilizes qb-target and qb-menu. Go to blip on the map, and interact with the NPC using your 3rd eye to purchase your mystery box. There are 2 options in default, low tier and premium tier (you can add more if you want).
 
 ![RazedMysteryBoxThumbnail](https://user-images.githubusercontent.com/91488137/198853685-004f9f9b-c030-45f2-a788-7b560311ebaf.png)
 
@@ -69,6 +69,11 @@ Config.PremiumTierRewards = {
 }
 Config.PremiumTierPrice = '2500'
 ```
+
+# Dependencies
+[qb-core](https://github.com/qbcore-framework/qb-core) \
+[qb-target](https://github.com/qbcore-framework/qb-target)\
+[qb-menu](https://github.com/qbcore-framework/qb-menu)
 
 # Tebex
 > https://razed.tebex.io/ - If you want to support me!
