@@ -1,4 +1,4 @@
-# Tesla HUD by Razed
+# Mystery Box by Razed
 **Hello FiveM community!👋**\
 We have created a simple mystery box script, which is fully customizable and utilizes qb-target. Go to blip on the map, and interact with the NPC using your 3rd eye to purchase your mystery box. There are 2 options in default, low tier and premium tier (you can add more if you want).
 
