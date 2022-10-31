@@ -19,39 +19,53 @@ https://user-images.githubusercontent.com/91488137/198853647-500635d1-a7ff-442f-
 * Drag and drop `razed-mysterybox`
 * In your `server.cfg` add `ensure razed-mysterybox`
 * In `images` add the images to `qb-inventory/html/images`
+* In your `qb-core/shared/items.lua` add 
+```
+['lowmysterybox'] 			     = {['name'] = 'lowmysterybox', 				['label'] = 'Low Tier Mystery Box',     ['weight'] = 500, 		['type'] = 'item', 		['image'] = 'lowmysterybox.png', 		['unique'] = false,     ['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'It\' an alright mystery box which includes some random but useful items, perfect if you\'re broke.'},
+['premiummysterybox'] 			 = {['name'] = 'premiummysterybox', 			['label'] = 'Premium Box', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'highmysterybox.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'An amazing mystery box which includes some top-notch items, perfect for your \'RICH\' lifestyle.'},
+```
 
 
 # Config
 ```
 Config = {}
+local model = 'a_m_m_business_01'
 
 Config.Status = '^5Version 1.0'
-Config.TargetDistance = 5
+Config.TargetDistance = 1
 
-Config.Shop = {
-    'a_m_m_business_01'
-}
-
-Config.Location = {
-    x = 259.32,
-    y = -998.41,
-    z = 28.26,
-    h = 69.03
+Config.BlipLocation = {
+    vector3(195.66, -1009.5, 29.31),
 }
 
 --Blip
-Config.BlipName = "Mystery Boxes"
-Config.BlipColour = 1
-Config.BlipScale = 0.5
+Config.Blip = {
+blipName = "Mystery Boxes",
+blipType = 465,
+blipColor = 5,
+blipScale = 0.9,
+}
+
+Config.Location = {
+    [1] = {
+        coords = vector4(195.66, -1009.5, 29.31, 160.0),
+        model = model,
+    },
+
+    -- [2] = {
+    --     coords = vector4(x, y, z, w),
+    --     model = model,
+    -- },
+}
 
 --Low Tier Box
 Config.LowTierRewards = {
     items = {
     --  {'item_name', chance},
-        {'peanutmandms', 1}, 
+        {'snikkel_candy', 1}, 
         {'sandwich', math.random(1,6)},
-        {'hersheysbar', math.random(1,6)},
-        {'cocacola', math.random(1,6)},
+        {'twerks_candy', math.random(1,6)},
+        {'kurkakola', math.random(1,6)},
     }
 }
 Config.LowTierPrice = '500'
@@ -61,7 +75,7 @@ Config.LowTierPrice = '500'
 Config.PremiumTierRewards = {
     items = {
     --  {'item_name', chance},
-        {'peanutmandms', math.random(1,6)}, 
+        {'snikkel_candy', math.random(1,6)}, 
         {'phone', math.random(1,6)},
         {'laptop', math.random(1,6)},
         {'diamond_ring', math.random(1,50)},
