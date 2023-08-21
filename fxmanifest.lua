@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 description "Razed's Mystery Box"
-author 'KLM#4160'
+author 'Razed Scripts'
 version '1.0'
 lua54 'yes'
 
